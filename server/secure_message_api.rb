@@ -9,7 +9,7 @@ class SecureMessageApi < Sinatra::Base
     slim params[:page].to_sym
   end
 
-  get '*' do
+  get '/' do
     slim :index
   end
 

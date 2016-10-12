@@ -14,5 +14,9 @@ angular
       .state('message', {
         url: '/message',
         templateUrl: 'message'
+      })
+      .state('create_message', {
+        url: '/create_message',
+        templateUrl: 'create_message'
       });
 }]);
