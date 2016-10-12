@@ -1,5 +1,5 @@
 {
-  "name": "secureMessageApp",
+  "name": "secure-message-app",
   "authors": [
     "v-gachkovsky <v.gachkovsky@gmail.com>"
   ],
@@ -16,6 +16,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-resource": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
+    "lodash": "^4.16.4",
+    "font-awesome": "^4.6.3"
   }
 }

@@ -8,4 +8,8 @@ class SecureMessageApi < Sinatra::Base
   get '/' do
     slim :index
   end
+
+  get '/:page' do
+    slim params[:page].to_sym
+  end
 end

@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "TypewriterRegular";
+  src: url("../fonts/TypewriterRegular/TypewriterRegular.eot");
+  src: url("../fonts/TypewriterRegular/TypewriterRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/TypewriterRegular/TypewriterRegular.woff") format("woff"),
+  url("../fonts/TypewriterRegular/TypewriterRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* font-family: "EurofurenceRegular"; */
+@font-face {
+  font-family: "EurofurenceRegular";
+  src: url("../fonts/EurofurenceRegular/EurofurenceRegular.eot");
+  src: url("../fonts/EurofurenceRegular/EurofurenceRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceRegular/EurofurenceRegular.woff") format("woff"),
+  url("../fonts/EurofurenceRegular/EurofurenceRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "EurofurenceBold"; */
+@font-face {
+  font-family: "EurofurenceBold";
+  src: url("../fonts/EurofurenceBold/EurofurenceBold.eot");
+  src: url("../fonts/EurofurenceBold/EurofurenceBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceBold/EurofurenceBold.woff") format("woff"),
+  url("../fonts/EurofurenceBold/EurofurenceBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "EurofurenceItalic"; */
+@font-face {
+  font-family: "EurofurenceItalic";
+  src: url("../fonts/EurofurenceItalic/EurofurenceItalic.eot");
+  src: url("../fonts/EurofurenceItalic/EurofurenceItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceItalic/EurofurenceItalic.woff") format("woff"),
+  url("../fonts/EurofurenceItalic/EurofurenceItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "EurofurenceLight"; */
+@font-face {
+  font-family: "EurofurenceLight";
+  src: url("../fonts/EurofurenceLight/EurofurenceLight.eot");
+  src: url("../fonts/EurofurenceLight/EurofurenceLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceLight/EurofurenceLight.woff") format("woff"),
+  url("../fonts/EurofurenceLight/EurofurenceLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "EurofurenceBoldItalic"; */
+@font-face {
+  font-family: "EurofurenceBoldItalic";
+  src: url("../fonts/EurofurenceBoldItalic/EurofurenceBoldItalic.eot");
+  src: url("../fonts/EurofurenceBoldItalic/EurofurenceBoldItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceBoldItalic/EurofurenceBoldItalic.woff") format("woff"),
+  url("../fonts/EurofurenceBoldItalic/EurofurenceBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "EurofurenceLightItalic"; */
+@font-face {
+  font-family: "EurofurenceLightItalic";
+  src: url("../fonts/EurofurenceLightItalic/EurofurenceLightItalic.eot");
+  src: url("../fonts/EurofurenceLightItalic/EurofurenceLightItalic.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/EurofurenceLightItalic/EurofurenceLightItalic.woff") format("woff"),
+  url("../fonts/EurofurenceLightItalic/EurofurenceLightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}

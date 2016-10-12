@@ -1,0 +1,46 @@
+/*@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";*/
+
+* {
+  padding: 2px;
+  margin: 2px;
+}
+.flex-container {
+  width: 100%;
+  /*height: 100%;*/
+  padding-top: 150px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.logo {
+  /*display: block;*/
+  /*border: none;*/
+}
+
+.name {
+  font-family: "EurofurenceRegular";
+  color: #4a4a4a;
+  font-size: 60px;
+}
+
+.or {
+  font-family: "EurofurenceRegular";
+  color: #4a4a4a;
+  font-size: 30px;
+}
+.create-message-btn {
+  width: 365px;
+}
+
+.open-message-btn {
+  margin-top: 20px;
+  width: 365px;
+}
+
+.id-input {
+  width: 365px;
+}
