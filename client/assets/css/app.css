@@ -1,8 +1,8 @@
 /*@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";*/
 
 * {
-  padding: 2px;
-  margin: 2px;
+  font-family: "EurofurenceRegular";
+  font-size: 20px;
 }
 .flex-container {
   width: 100%;
@@ -21,10 +21,24 @@
   /*border: none;*/
 }
 
+.logo-sm {
+  margin-top: -15px;
+  margin-right: 10px;
+  display: inline-block;
+  width: 75px;
+}
+
 .name {
   font-family: "EurofurenceRegular";
   color: #4a4a4a;
   font-size: 60px;
+}
+
+.name-sm {
+  font-family: "EurofurenceRegular";
+  color: #4a4a4a;
+  font-size: 40px;
+  display: inline-block;
 }
 
 .or {
@@ -42,5 +56,22 @@
 }
 
 .id-input {
+  font-size: 17px;
+  height: 40px;
   width: 365px;
+}
+
+.password-field {
+  width: 10px;
+}
+
+.header-sm {
+  margin-top: 20px;
+  height: 120px;
+}
+
+.message-field {
+  font-size: 20px;
+  width: 730px;
+  height: 365px;
 }

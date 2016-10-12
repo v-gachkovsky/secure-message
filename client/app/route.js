@@ -10,5 +10,9 @@ angular
       .state('main', {
         url: '/',
         templateUrl: 'main'
+      })
+      .state('message', {
+        url: '/message',
+        templateUrl: 'message'
       });
 }]);
