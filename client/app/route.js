@@ -9,14 +9,14 @@ angular
       $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'main'
+        templateUrl: '/partials/main'
       })
       .state('message', {
         url: '/message',
-        templateUrl: 'message'
+        templateUrl: 'partials/message'
       })
       .state('create_message', {
         url: '/create_message',
-        templateUrl: 'create_message'
+        templateUrl: 'partials/create_message'
       });
 }]);

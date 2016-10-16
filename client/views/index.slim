@@ -15,6 +15,7 @@ html
   body(ng-app='secureMessageApp')
     ui-view
 
+    script(src='../bower_components/sjcl/sjcl.js')
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js')
     script(src='../bower_components/angular-resource/angular-resource.min.js')
     script(src='../bower_components/angular-ui-router/release/angular-ui-router.js')
@@ -22,4 +23,7 @@ html
     script(src='../app/app.js')
     script(src='../app/route.js')
 
-    script(src='../app/controllers/some.controller.js')
+    script(src='../app/components/encryptor/encryptor.service.js')
+    script(src='../app/components/message/create/create_message.component.js')
+    script(src='../app/components/message/create/create_message.controller.js')
+    script(src='../app/components/message/create/message_sender.service.js')

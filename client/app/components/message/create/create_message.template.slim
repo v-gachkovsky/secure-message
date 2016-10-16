@@ -1,0 +1,39 @@
+.row
+  .col-lg-4
+    p Enter you password for encode message
+
+    input.form-control(type='password' placeholder="Enter your password here" ng-model='password')
+
+    .form.form-inline
+      .row
+        .col.lg-8
+          label
+            input.destroy-type(type='checkbox' ng-model='destroy.byTime')
+            | Destroy by time
+        .col-lg-4
+          select.form-control(ng-model='destroy.afterTime')
+            option(value='1') 1 hour
+            option(value='2') 2 hours
+            option(value='3') 3 hours
+      .row
+        .col.lg-8
+          label
+            input.destroy-type(type='checkbox' ng-model='destroy.byVisit')
+            | Destroy by visit
+        .col-lg-4
+          select.form-control(ng-model='destroy.afterVisit')
+            option(value='1') 1 visit
+            option(value='2') 2 visits
+            option(value='3') 3 visits
+
+  .col-lg-7
+    p Message:
+    textarea.form-control.message-field(rows="6" placeholder="Enter your message here" ng-model='message')
+    button.btn.btn-success(ng-click='createMessage()') Create Message
+.row
+  .col-lg-12
+    strong
+      p Message ID: {{id}}
+      p
+        | URL:&nbsp;
+        a(href="http://localhost:4567/message/{{id}}") http://localhost:4567/message/{{id}}
