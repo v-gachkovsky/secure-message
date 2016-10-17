@@ -3,12 +3,16 @@
  */
 angular
   .module('secureMessageApp')
-  .factory('SenderService', [
+  .factory('MessageHandlerService', [
     '$resource',
     function ($resource) {
-      return $resource('/create/message', {}, {
+      return $resource('/message/:id', {}, {
         save: {
           method: 'POST'
+        },
+
+        get: {
+          method: 'GET'
         }
       });
     }

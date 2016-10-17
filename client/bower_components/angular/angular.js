@@ -30222,7 +30222,7 @@ var ngHideDirective = ['$animate', function($animate) {
     link: function(scope, element, attr) {
       scope.$watch(attr.ngHide, function ngHideWatchAction(value) {
         // The comment inside of the ngShowDirective explains why we add and
-        // remove a temporary class for the show/hide animation
+        // remove a temporary class for the open/hide animation
         $animate[value ? 'addClass' : 'removeClass'](element,NG_HIDE_CLASS, {
           tempClasses: NG_HIDE_IN_PROGRESS_CLASS
         });

@@ -31,6 +31,7 @@ class Message
   field :_id
   field :data
   field :date
+  field :visits
   field :destroy
 
 end

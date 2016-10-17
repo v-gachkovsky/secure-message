@@ -4,8 +4,8 @@
 angular
   .module('secureMessageApp')
   .controller('CreateMessageCtrl', [
-    '$scope', 'EncryptorService', 'SenderService',
-    function ($scope, EncryptorService, SenderService) {
+    '$scope', 'EncryptorService', 'MessageHandlerService',
+    function ($scope, EncryptorService, MessageHandlerService) {
       function s(s) {
         return Math.floor(s).toString(16);
       }
@@ -27,14 +27,12 @@ angular
       };
       
       $scope.createMessage = function() {
-        var id = $scope.id
-        var date = new Date().getTime();
+        var id = $scope.id;
         var encryptedMessage = EncryptorService.encrypt($scope.password, $scope.message);
 
         var encryptedData = {
           _id: id,
           data: JSON.parse(encryptedMessage),
-          date: date,
           destroy: {
             byTime: $scope.destroy.byTime,
             byVisit: $scope.destroy.byVisit,
@@ -43,7 +41,7 @@ angular
           }
         };
 
-        SenderService.save(encryptedData);
+        MessageHandlerService.save(encryptedData);
       }
     }
   ]);

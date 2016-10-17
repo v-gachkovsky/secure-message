@@ -6,7 +6,7 @@ angular
   .factory('EncryptorService', [
     function () {
       return {
-        encrypt: function(data, password) {
+        encrypt: function(password, data) {
           return sjcl.encrypt(password, data);
         },
 

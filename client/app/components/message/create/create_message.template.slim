@@ -29,11 +29,8 @@
   .col-lg-7
     p Message:
     textarea.form-control.message-field(rows="6" placeholder="Enter your message here" ng-model='message')
-    button.btn.btn-success(ng-click='createMessage()') Create Message
+    button.btn.btn-success(ng-click='createMessage()' ui-sref='main') Create Message
 .row
   .col-lg-12
     strong
       p Message ID: {{id}}
-      p
-        | URL:&nbsp;
-        a(href="http://localhost:4567/message/{{id}}") http://localhost:4567/message/{{id}}

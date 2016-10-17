@@ -955,7 +955,7 @@ function escapeGroupsForEntities(str, lists)
         {
             list = lists[l];
             r = entityConversionLists.normal[list.group][cur];
-            // if (cur == ' ' && list.group == 'whitespace' && last == ' ') // only show for runs of more than one space
+            // if (cur == ' ' && list.group == 'whitespace' && last == ' ') // only open for runs of more than one space
             //     r = ' ';
             if (r)
             {
@@ -6109,7 +6109,7 @@ FBL.ns( /** @scope s_i18n */ function() { with (FBL) {
 // TODO: xxxpedro localization
 var oSTR =
 {
-    "NoMembersWarning": "There are no properties to show for this object.",
+    "NoMembersWarning": "There are no properties to open for this object.",
 
     "EmptyStyleSheet": "There are no rules in this stylesheet.",
     "EmptyElementCSS": "This element has no style rules.",
@@ -7282,7 +7282,7 @@ Firebug.Panel =
     },
 
     // An array of objects that can be passed to getObjectLocation.
-    // The list of things a panel can show, eg sourceFiles.
+    // The list of things a panel can open, eg sourceFiles.
     // Only shown if panel.location defined and supportsObject true
     getLocationList: function()
     {
@@ -7309,7 +7309,7 @@ Firebug.Panel =
 
     /*
      *  UI signal that a tab needs attention, eg Script panel is currently stopped on a breakpoint
-     *  @param: show boolean, true turns on.
+     *  @param: open boolean, true turns on.
      */
     highlight: function(show)
     {
@@ -7415,7 +7415,7 @@ Firebug.Panel =
             screenY = window.screenTop;
         }
 
-        contextMenu.show(event.screenX-box.left, event.screenY-screenY-box.top);
+        contextMenu.open(event.screenX-box.left, event.screenY-screenY-box.top);
         /**/
     }
 
@@ -8265,7 +8265,7 @@ Menu.prototype =  extend(Controller,
 
         if (this.isVisible) return;
 
-        //console.log("show", this.element.id);
+        //console.log("open", this.element.id);
 
         x = x || 0;
         y = y || 0;
@@ -15341,7 +15341,7 @@ var OBJECTLINK = this.OBJECTLINK = isIE6 ? // IE6 object link representation
     A({
         "class": "objectLink objectLink-$className a11yFocus",
         href: "javascript:void(0)",
-        // workaround to show XPath (a better approach would use the tooltip on mouseover,
+        // workaround to open XPath (a better approach would use the tooltip on mouseover,
         // so the XPath information would be calculated dynamically, but we need to create
         // a tooltip class/wrapper around Menu or InfoTip)
         title: "$object|FBL.getElementXPath",
@@ -15350,7 +15350,7 @@ var OBJECTLINK = this.OBJECTLINK = isIE6 ? // IE6 object link representation
     : // Other browsers
     A({
         "class": "objectLink objectLink-$className a11yFocus",
-        // workaround to show XPath (a better approach would use the tooltip on mouseover,
+        // workaround to open XPath (a better approach would use the tooltip on mouseover,
         // so the XPath information would be calculated dynamically, but we need to create
         // a tooltip class/wrapper around Menu or InfoTip)
         title: "$object|FBL.getElementXPath",
@@ -16133,7 +16133,7 @@ this.Element = domplate(Firebug.Rep,
              {
                  var attr = elt.attributes[i];
 
-                 // we must check if the attribute is specified otherwise IE will show them
+                 // we must check if the attribute is specified otherwise IE will open them
                  if (!attr.specified || attr.nodeName && attr.nodeName.indexOf("firebug-") != -1)
                     continue;
                  else if (attr.nodeName == "id")
@@ -17168,7 +17168,7 @@ this.ApplicationCache = domplate(Firebug.Rep,
 
 this.Storage = domplate(Firebug.Rep,
 {
-    tag: OBJECTBOX({onclick: "$show"}, OBJECTLINK("$object|summarize")),
+    tag: OBJECTBOX({onclick: "$open"}, OBJECTLINK("$object|summarize")),
 
     summarize: function(storage)
     {
@@ -18837,7 +18837,7 @@ var XMLHttpRequestWrapper = function(activeXObject)
                 var name = match[1];
                 var value = match[2];
 
-                // update the spy mimeType property so we can detect when to show
+                // update the spy mimeType property so we can detect when to open
                 // custom response viewers (such as HTML, XML or JSON viewer)
                 if (name == "Content-Type")
                     spy.mimeType = value;
@@ -22447,7 +22447,7 @@ Firebug.ConsolePanel.prototype = extend(Firebug.Panel,
     ishow: function(state)
     {
         if (FBTrace.DBG_CONSOLE)
-            FBTrace.sysout("Console.panel show; " + this.context.getName(), state);
+            FBTrace.sysout("Console.panel open; " + this.context.getName(), state);
 
         var enabled = Firebug.Console.isAlwaysEnabled();
         if (enabled)
@@ -22467,7 +22467,7 @@ Firebug.ConsolePanel.prototype = extend(Firebug.Panel,
                  scrollToBottom(this.panelNode);
 
              if (FBTrace.DBG_CONSOLE)
-                 FBTrace.sysout("console.show ------------------ wasScrolledToBottom: " +
+                 FBTrace.sysout("console.open ------------------ wasScrolledToBottom: " +
                     this.wasScrolledToBottom + ", " + this.context.getName());
         }
         else
@@ -22704,7 +22704,7 @@ Firebug.ConsolePanel.prototype = extend(Firebug.Panel,
 
     showCommandLine: function(shouldShow)
     {
-        //TODO: xxxpedro show command line important
+        //TODO: xxxpedro open command line important
         return;
 
         if (shouldShow)
@@ -24296,7 +24296,7 @@ Firebug.HTML = extend(Firebug.Module,
                     if (!attr.specified ||
                         // Issue 4432:  Firebug Lite: HTML is mixed-up with functions
                         // The problem here is that expando properties added to DOM elements in
-                        // IE < 9 will behave like DOM attributes and so they'll show up when
+                        // IE < 9 will behave like DOM attributes and so they'll open up when
                         // looking at element.attributes list.
                         isIE && (browserVersion-0<9) && typeof attr.nodeValue != "string" ||
                         Firebug.ignoreFirebugElements && ignoreHTMLProps.hasOwnProperty(attr.nodeName))
@@ -26792,12 +26792,12 @@ Firebug.CSSModule = extend(Firebug.Module,
                 if (rules.length > 0)
                     var touch = rules[0];
                 if (FBTrace.DBG_CSS && touch)
-                    FBTrace.sysout("css.show() touch "+typeof(touch)+" in "+(styleSheets[i].href?styleSheets[i].href:context.getName()));
+                    FBTrace.sysout("css.open() touch "+typeof(touch)+" in "+(styleSheets[i].href?styleSheets[i].href:context.getName()));
             }
             catch(e)
             {
                 if (FBTrace.DBG_ERRORS)
-                    FBTrace.sysout("css.show: sheet.cssRules FAILS for "+(styleSheets[i]?styleSheets[i].href:"null sheet")+e, e);
+                    FBTrace.sysout("css.open: sheet.cssRules FAILS for "+(styleSheets[i]?styleSheets[i].href:"null sheet")+e, e);
             }
         }
     },
@@ -27053,7 +27053,7 @@ Firebug.CSSStyleSheetPanel.prototype = extend(Firebug.SourceBoxPanel,
 
     translateName: function(name, value)
     {
-        // Don't show these proprietary Mozilla properties
+        // Don't open these proprietary Mozilla properties
         if ((value == "-moz-initial"
             && (name == "-moz-background-clip" || name == "-moz-background-origin"
                 || name == "-moz-background-inline-policy"))
@@ -27434,7 +27434,7 @@ Firebug.CSSStyleSheetPanel.prototype = extend(Firebug.SourceBoxPanel,
         if (styleSheet.editStyleSheet)
             styleSheet = styleSheet.editStyleSheet.sheet;
 
-        // if it is a restricted stylesheet, show the warning message and abort the update process
+        // if it is a restricted stylesheet, open the warning message and abort the update process
         if (styleSheet.restricted)
         {
             FirebugReps.Warning.tag.replace({object: "AccessRestricted"}, this.panelNode);
@@ -28865,7 +28865,7 @@ ScriptPanel.prototype = extend(Firebug.Panel,
 
         for(var i=0, script; script=scripts[i]; i++)
         {
-            // Don't show Firebug Lite source code in the list of options
+            // Don't open Firebug Lite source code in the list of options
             if (Firebug.ignoreFirebugElements && script.getAttribute("firebugIgnore"))
                 continue;
 
@@ -30548,7 +30548,7 @@ function isClassFunction(fn)
 // FIXME: xxxpedro This function is already defined in Lib. If we keep this definition here, it
 // will crash IE9 when not running the IE Developer Tool with JavaScript Debugging enabled!!!
 // Check if this function is in fact defined in Firebug for Firefox. If so, we should remove
-// this from here. The only difference of this function is the IE hack to show up the prototype
+// this from here. The only difference of this function is the IE hack to open up the prototype
 // of functions, but Firebug no longer shows the prototype for simple functions.
 //var hasProperties = function hasProperties(ob)
 //{

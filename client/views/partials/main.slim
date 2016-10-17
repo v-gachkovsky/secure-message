@@ -6,6 +6,7 @@
     | Create Secure Message
   span.or
     | OR
-  input.form-control.id-input(type='text' placeholder='Enter your message id here and press button below to')
-  button.btn-lg.btn-primary.open-message-btn(ui-sref='message')
-    | Open Message
+  div(ng-controller='MainCtrl')
+    input.form-control.id-input(type='text' placeholder='Enter your message id here and press button below to' ng-model='messageID')
+    button.btn-lg.btn-primary.open-message-btn(ng-click='setMessageID(messageID)' ui-sref='message')
+      | Open Message
