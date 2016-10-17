@@ -1,9 +1,4 @@
 development:
   clients:
     default:
-      database: secure-message-prod
-      hosts:
-        - localhost:57176
-      options:
-        user: secure-user
-        password: 123321
+      uri: mongodb://secure-user:123321@ds057176.mlab.com:57176/secure-message-prod

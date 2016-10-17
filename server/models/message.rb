@@ -3,7 +3,7 @@ class Message
   include Mongoid::Document
   include Mongoid::Attributes::Dynamic
 
-  store_in collection: 'messages', database: 'secure-message-dev', client: 'default'
+  store_in collection: 'messages', database: 'secure-message-prod', client: 'default'
 
   # {
   #   "_id":"5802bf19881bf686fd5fa4f9",
