@@ -1,4 +1,4 @@
 require './server/config/environment'
 require './server/secure_message_api'
 
-run SecureMessageApi
+run Sinatra::Application
