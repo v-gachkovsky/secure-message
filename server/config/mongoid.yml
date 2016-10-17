@@ -1,6 +1,9 @@
 development:
   clients:
     default:
-      database: secure-message-dev
+      database: secure-message-prod
       hosts:
-        - localhost:27017
+        - localhost:57176
+      options:
+        user: secure-user
+        password: 123321
