@@ -1,2 +1,4 @@
 .idea/
 client/bower_components
+/data/
+mongod
