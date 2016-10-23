@@ -6,13 +6,17 @@ angular
   .factory('MessageHandlerService', [
     '$resource',
     function ($resource) {
-      return $resource('/message/:id', {}, {
+      return $resource('/message/:id', { id: '@id'}, {
         save: {
           method: 'POST'
         },
 
         get: {
           method: 'GET'
+        },
+
+        remove: {
+          method: 'DELETE'
         }
       });
     }

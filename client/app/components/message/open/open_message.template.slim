@@ -5,7 +5,8 @@
       input.form-control(type='password' placeholder="Enter your password" ng-model='password')
       span.input-group-btn
         button.btn.btn-danger(type='button' ng-disabled='blocked' ng-click='tryDecrypt()') Decrypt
-    p.warning You have {{ attempts }} attempts!
+    p.warning
+      | {{ attemptsMessage }}
   .col-lg-7
     p Message:
     p

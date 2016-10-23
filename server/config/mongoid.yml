@@ -1,4 +1,4 @@
 development:
   clients:
     default:
-      uri: mongodb://secure-user:123321@ds057176.mlab.com:57176/secure-message-prod
+      uri: mongodb://localhost/secure-message-dev
